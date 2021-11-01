@@ -17,7 +17,7 @@ const MyOrders = () => {
   }, []);
 
   const handleDelete = (id) => {
-    const url = `https://howling-zombie-15151.herokuapp.com/${id}`;
+    const url = `https://howling-zombie-15151.herokuapp.com/orders/${id}`;
     const proceed = window.confirm('Are you sure, you want to delete');
     if (proceed) {
       fetch(url, {
