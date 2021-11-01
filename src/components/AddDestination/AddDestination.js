@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import './AddDestination.css';
 
 const AddDestination = () => {
   const imgRef = useRef();
@@ -40,9 +41,9 @@ const AddDestination = () => {
   };
 
   return (
-    <div>
-      <h2>Add a new destination</h2>
-      <div className="booking-form" style={{ textAlign: 'start' }}>
+    <div className="mx-auto w-100">
+      <h3 className="mt-5">Add a new destination</h3>
+      <div className="insert-form" style={{ textAlign: 'start' }}>
         <Form onSubmit={handleAdd}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Image Url</Form.Label>
@@ -70,7 +71,7 @@ const AddDestination = () => {
             <Form.Control type="text" placeholder="Phone" ref={packageRef} />
           </Form.Group>
           <Button variant="primary" type="submit">
-            Submit
+            Add Destination
           </Button>
         </Form>
       </div>

@@ -3,7 +3,6 @@ import Destinations from '../Destinations/Destinations';
 import Banner from '../Banner/Banner';
 import Progress from '../Progress/Progress';
 import Review from '../Review/Review';
-// import { ProgressBar } from 'react-bootstrap';
 
 const Home = () => {
   return (

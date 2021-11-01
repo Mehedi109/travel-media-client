@@ -9,11 +9,15 @@ const Review = () => {
   }, []);
   return (
     <Container>
-      <div className="mt-5 mb-5" data-aos="fade-down" data-aos-delay="500">
+      <div className="mt-5 mb-5">
         <h2 className="mb-5">What our customers says</h2>
         <Row>
           <Col xs={12} md={4} className="">
-            <div className="shadow-lg p-3 border-radius-3">
+            <div
+              className="shadow-lg p-3 border-radius-3"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <Row>
                 <Col xs={12} md={6}>
                   <div style={{ width: '', marginRight: '' }}>
@@ -31,24 +35,27 @@ const Review = () => {
                 </Col>
                 <Col xs={12} md={6}>
                   <div style={{ width: '', marginRight: '10px' }}>
-                    <h5>Paris</h5>
+                    <h5>Solim Khan</h5>
                     <p>
                       Really it was an awesome place and wonderful journey with
                       this agency.
                     </p>
-                    <h6>Solim Khan</h6>
                   </div>
                 </Col>
               </Row>
             </div>
           </Col>
           <Col xs={12} md={4} className="">
-            <div className="shadow-lg p-3 border-radius-3">
+            <div
+              className="shadow-lg p-3 border-radius-3"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <Row>
                 <Col xs={12} md={6}>
                   <div style={{ width: '', marginRight: '' }}>
                     <img
-                      src="https://i.ibb.co/9v7w6Xv/photo-1568602471122-7832951cc4c5-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
+                      src="https://i.ibb.co/Z81fVm5/photo-1570612861542-284f4c12e75f-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
                       alt=""
                       className=" mt-3 "
                       style={{
@@ -61,24 +68,27 @@ const Review = () => {
                 </Col>
                 <Col xs={12} md={6}>
                   <div style={{ width: '', marginRight: '10px' }}>
-                    <h5>Dubai</h5>
+                    <h5>Mario</h5>
                     <p>
                       Travel media is very helful for the people who wants to
                       travel safely
                     </p>
-                    <h6>Mario</h6>
                   </div>
                 </Col>
               </Row>
             </div>
           </Col>
           <Col xs={12} md={4} className="">
-            <div className="shadow-lg p-3 border-radius-3">
+            <div
+              className="shadow-lg p-3 border-radius-3"
+              data-aos="fade-down"
+              data-aos-delay="700"
+            >
               <Row>
                 <Col xs={12} md={6}>
                   <div style={{ width: '', marginRight: '' }}>
                     <img
-                      src="https://i.ibb.co/9v7w6Xv/photo-1568602471122-7832951cc4c5-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwx-Mj-A3f-DB8-MXxhb.jpg"
+                      src="https://i.ibb.co/ccHfdkP/photo-1564564321837-a57b7070ac4f-ixlib-rb-1-2.jpg"
                       alt=""
                       className=" mt-3 "
                       style={{
@@ -91,11 +101,10 @@ const Review = () => {
                 </Col>
                 <Col xs={12} md={6}>
                   <div style={{ width: '', marginRight: '10px' }}>
-                    <h5>Bali</h5>
+                    <h5>Domingo</h5>
                     <p>
                       Travel media is a very good travel agency for now days.
                     </p>
-                    <h6>Domingo</h6>
                   </div>
                 </Col>
               </Row>

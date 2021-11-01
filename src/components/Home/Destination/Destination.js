@@ -30,19 +30,15 @@ const Destination = ({ destination }) => {
             <h6>Package : {pack}</h6>
             <h5>TK: {price}</h5>
           </Card.Body>
-          {/* <Card.Footer> */}
           <small className="text-muted">
-            {/* <Link> */}
             <button
-              className="btn mb-5"
+              className="btn btn-success mb-5"
               onClick={book}
-              style={{ backgroundColor: '#20c997', marginBottom: '15px' }}
+              style={{ backgroundColor: '', marginBottom: '15px' }}
             >
               Book Now
             </button>
-            {/* </Link> */}
           </small>
-          {/* </Card.Footer> */}
         </Card>
       </div>
     </Col>

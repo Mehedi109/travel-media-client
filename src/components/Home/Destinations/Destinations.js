@@ -12,7 +12,9 @@ const Destinations = () => {
   return (
     <Container>
       <div>
-        <h3 className="mt-5">The destination where we offer for travelling</h3>
+        <h3 className="mt-5 mb-3">
+          The destination where we offer for travelling
+        </h3>
         <Row>
           {destinations.map((destination) => (
             <Destination

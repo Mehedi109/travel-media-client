@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './ManageAllOrders.css';
 
 const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -30,13 +31,15 @@ const ManageAllOrders = () => {
 
   return (
     <div>
-      <h2>All Orders {orders.length}</h2>
-      <Table striped bordered hover size="sm">
+      <h2 className="mt-5 mb-5">All Orders : {orders.length}</h2>
+      <Table className="manage-orders" striped bordered hover size="sm">
         <thead>
           <tr>
+            <th>Name</th>
             <th>Email</th>
             <th>Destination</th>
             <th>Total Price</th>
+            <th>Phone</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -44,9 +47,11 @@ const ManageAllOrders = () => {
         <tbody>
           {orders.map((order) => (
             <tr>
+              <td>{order.name}</td>
               <td>{order.email}</td>
               <td>{order.destination}</td>
               <td>{order.price}</td>
+              <td>{order.phone}</td>
               <td>{order.status}</td>
               <td>
                 <Link to={`/updateOrders/${order._id}`}>

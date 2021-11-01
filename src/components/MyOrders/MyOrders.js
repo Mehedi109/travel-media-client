@@ -36,7 +36,7 @@ const MyOrders = () => {
   return (
     <>
       <div>
-        <h2>My Orders :{orders.length}</h2>
+        <h2 className="mt-5 mb-5">My Orders : {orders.length}</h2>
         <Table striped bordered hover size="sm">
           <thead>
             <tr>

@@ -59,7 +59,7 @@ const PlaceOrder = () => {
   return (
     <>
       <Container>
-        <div className="">
+        <div className="mt-5">
           <img src={destination.img} alt="" />
           <h5 className="mt-5">{destination.name}</h5>
           <p>{destination.description}</p>
