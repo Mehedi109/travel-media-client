@@ -11,13 +11,13 @@ const MyOrders = () => {
   console.log(email);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${email}`)
+    fetch(`https://howling-zombie-15151.herokuapp.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://howling-zombie-15151.herokuapp.com/${id}`;
     const proceed = window.confirm('Are you sure, you want to delete');
     if (proceed) {
       fetch(url, {

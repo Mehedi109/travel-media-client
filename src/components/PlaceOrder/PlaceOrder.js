@@ -14,7 +14,7 @@ const PlaceOrder = () => {
 
   console.log(id);
   useEffect(() => {
-    const url = `http://localhost:5000/destinations/${id}`;
+    const url = `https://howling-zombie-15151.herokuapp.com/destinations/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setDestinaion(data));
@@ -41,7 +41,7 @@ const PlaceOrder = () => {
     };
 
     console.log(newOrder);
-    fetch('http://localhost:5000/orders', {
+    fetch('https://howling-zombie-15151.herokuapp.com/orders', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

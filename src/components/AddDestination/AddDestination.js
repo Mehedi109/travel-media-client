@@ -24,7 +24,7 @@ const AddDestination = () => {
       pack: pack,
     };
 
-    fetch('http://localhost:5000/addDestination', {
+    fetch('https://howling-zombie-15151.herokuapp.com/addDestination', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
