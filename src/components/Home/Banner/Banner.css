@@ -1,9 +1,7 @@
+.banner {
+}
 .banner img {
   height: 100vh;
-}
-.banner h2 {
-  font-size: 40px;
-  margin-bottom: 100px;
 }
 .carousel-item {
   height: 80vh;
@@ -13,7 +11,7 @@
   background-size: cover;
 }
 .carousel-item::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -24,6 +22,12 @@
   opacity: 0.5;
 }
 
+@media (max-width: 1400px) and (min-width: 689px) {
+  .banner h2 {
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
+}
 @media (max-width: 688px) and (min-width: 320px) {
   .carousel-item {
   }
@@ -33,5 +37,15 @@
   .mobile-menu {
     flex-direction: column;
     margin-top: 20px;
+  }
+  .carousel-item {
+    height: 50px;
+  }
+  .banner h2 {
+    margin-bottom: 75px;
+  }
+  .carousel-heading {
+    /* font-size: 25px; */
+    /* line-height: 35px; */
   }
 }

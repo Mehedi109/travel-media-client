@@ -1,6 +1,10 @@
 .login-btn {
   padding: 30px;
 }
+.login-form {
+  margin-top: 140px;
+  margin-bottom: 80px;
+}
 @media (max-width: 420px) {
   .login-btn {
     padding: 0px;

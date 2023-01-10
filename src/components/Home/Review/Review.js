@@ -8,15 +8,16 @@ const Review = () => {
     AOS.init();
   }, []);
   return (
-    <Container>
+    <div className="review-container">
+      <Container>
       <div className="mt-5 mb-5">
         <h2 className="mb-5">What our customers says</h2>
-        <Row>
+        <Row className="g-4">
           <Col xs={12} md={4} className="">
             <div
               className="shadow-lg p-3 border-radius-3"
               data-aos="fade-up"
-              data-aos-delay="400"
+              data-aos-duration="1000"
             >
               <Row>
                 <Col xs={12} md={6}>
@@ -49,7 +50,7 @@ const Review = () => {
             <div
               className="shadow-lg p-3 border-radius-3"
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-duration="1000"
             >
               <Row>
                 <Col xs={12} md={6}>
@@ -70,7 +71,7 @@ const Review = () => {
                   <div style={{ width: '', marginRight: '10px' }}>
                     <h5>Mario</h5>
                     <p>
-                      Travel media is very helful for the people who wants to
+                      Travel media is very helpful for the people who wants to
                       travel safely
                     </p>
                   </div>
@@ -81,8 +82,8 @@ const Review = () => {
           <Col xs={12} md={4} className="">
             <div
               className="shadow-lg p-3 border-radius-3"
-              data-aos="fade-down"
-              data-aos-delay="700"
+              data-aos="fade-up"
+              data-aos-duration="1000"
             >
               <Row>
                 <Col xs={12} md={6}>
@@ -113,6 +114,7 @@ const Review = () => {
         </Row>
       </div>
     </Container>
+    </div>
   );
 };
 

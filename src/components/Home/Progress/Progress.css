@@ -1,0 +1,110 @@
+.progress-body{
+    margin-top: 100px;
+}
+.region-progress h6{
+    margin: 50px 0;
+    position: relative;
+    text-align: start;
+}
+
+.region-progress h6::before{
+    content:'';
+    position:absolute;
+    top: 25px;
+    background-color:#ddd;
+    width: 100%;
+    height: 16px;
+    border-radius: 500px;
+}
+
+.region-progress h6::after{
+    content:'';
+    position:absolute;
+    top: 25px;
+    left: 0px;
+    background-color:#ddd;
+    width: 100%;
+    height: 16px;
+    border-radius: 500px;
+    /* background-color: red; */
+    width: 0;
+    animation-duration:3s;
+    animation-timing-function:linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    /* animation-direction: forward; */
+    animation-fill-mode: forwards;
+}
+
+.region-progress h6.asia::after{
+    animation-name: asia;
+}
+.region-progress h6.europe::after{
+    animation-name: europe;
+}
+.region-progress h6.america::after{
+    animation-name: america;
+}
+.region-progress h6.australia::after{
+    animation-name: australia;
+}
+
+@keyframes asia {
+    to{
+        background-color: red;
+        width:90%;
+    }
+}
+@keyframes europe {
+    to{
+        background-color: orange;
+        width:70%;
+    }
+}
+@keyframes america {
+    to{
+        background-color: purple;
+        width:50%;
+    }
+}
+@keyframes australia {
+    to{
+        background-color: green;
+        width:70%;
+    }
+}
+
+@media (max-width:1400px) and (min-width:689px) {
+    .region-progress span{
+        display:inline;
+        /* margin-left: 480px; */
+        margin-top: 40px;
+    }   
+    .span-asia{
+        margin-left:470px;
+    }
+    .span-europe{
+        margin-left:450px;
+    }
+    .span-america{
+        margin-left:448px;
+    }
+    .span-australia{
+        margin-left:440px;
+    }
+}
+
+@media (max-width:688px) and (min-width: 320px) {
+    .span-asia{
+        margin-left:300px;
+    }
+    .span-europe{
+        margin-left:280px;
+    }
+    .span-america{
+        margin-left:268px;
+    }
+    .span-australia{
+        margin-left:270px;
+    }
+}

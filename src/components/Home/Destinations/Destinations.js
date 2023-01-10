@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
-import Destination from '../Destination/Destination';
+import React, { useEffect, useState } from "react";
+import { Container, Row } from "react-bootstrap";
+import Destination from "../Destination/Destination";
 
 const Destinations = () => {
   const [destinations, setDestinations] = useState([]);
   useEffect(() => {
-    fetch('https://howling-zombie-15151.herokuapp.com/destinations')
+    fetch("https://tourism-server.onrender.com/destinations")
       .then((res) => res.json())
       .then((data) => setDestinations(data));
   }, []);

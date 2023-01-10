@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import './AddDestination.css';
+import React, { useRef } from "react";
+import { Form, Button } from "react-bootstrap";
+import "./AddDestination.css";
 
 const AddDestination = () => {
   const imgRef = useRef();
@@ -25,25 +25,27 @@ const AddDestination = () => {
       pack: pack,
     };
 
-    fetch('https://howling-zombie-15151.herokuapp.com/addDestination', {
-      method: 'POST',
+    fetch("https://tourism-server.onrender.com/addDestination", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
       body: JSON.stringify(newDestination),
     })
       .then((res) => res.json())
       .then((data) => {
-        alert('Destination added Successfully');
+        alert("Destination added Successfully");
         e.target.reset();
       });
     e.preventDefault();
   };
 
   return (
-    <div className="mx-auto w-100">
-      <h3 className="mt-5">Add a new destination</h3>
-      <div className="insert-form" style={{ textAlign: 'start' }}>
+    <div className="mx-auto w-100 mb-5">
+      <h3 className="mb-5" style={{ marginTop: "120px" }}>
+        Add a new destination
+      </h3>
+      <div className="insert-form" style={{ textAlign: "start" }}>
         <Form onSubmit={handleAdd}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Image Url</Form.Label>

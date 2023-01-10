@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './ManageAllOrders.css';
+import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./ManageAllOrders.css";
 
 const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    fetch('https://howling-zombie-15151.herokuapp.com/orders')
+    fetch("https://tourism-server.onrender.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
 
   const handleDelete = (id) => {
-    const url = `https://howling-zombie-15151.herokuapp.com/orders/${id}`;
-    const proceed = window.confirm('Are you sure, you want to delete');
+    const url = `https://tourism-server.onrender.com/orders/${id}`;
+    const proceed = window.confirm("Are you sure, you want to delete");
     if (proceed) {
       fetch(url, {
-        method: 'DELETE',
+        method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {
-            alert('data deleted successfully');
+            alert("data deleted successfully");
             const remainig = orders.filter((order) => order._id !== id);
             setOrders(remainig);
           }
@@ -31,7 +31,9 @@ const ManageAllOrders = () => {
 
   return (
     <div>
-      <h2 className="mt-5 mb-5">All Orders : {orders.length}</h2>
+      <h2 className=" mb-5" style={{ marginTop: "120px" }}>
+        All Orders : {orders.length}
+      </h2>
       <Table className="manage-orders" striped bordered hover size="sm">
         <thead>
           <tr>

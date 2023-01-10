@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useLocation, useHistory } from 'react-router';
-import useAuth from '../../../hooks/useAuth';
-import './Login.css';
+import React, { useState } from "react";
+import { useLocation, useHistory } from "react-router";
+import useAuth from "../../../hooks/useAuth";
+import "./Login.css";
 
 const Login = () => {
   const { googleLogIn } = useAuth();
 
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location.state?.from || '/home';
+  const redirect_uri = location.state?.from || "/home";
 
   const handleGoogleLogIn = () => {
     googleLogIn().then((result) => {

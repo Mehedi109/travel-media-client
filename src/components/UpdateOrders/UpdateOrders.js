@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import { useParams } from 'react-router';
-import useAuth from '../../hooks/useAuth';
-import './UpdateOrders.css';
+import React, { useEffect, useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { useParams } from "react-router";
+import useAuth from "../../hooks/useAuth";
+import "./UpdateOrders.css";
 
 const UpdateOrders = () => {
   const { user } = useAuth();
   const { id } = useParams();
   const [order, setOrder] = useState([]);
-  const url = `https://howling-zombie-15151.herokuapp.com/orders/${id}`;
+  const url = `https://tourism-server.onrender.com/orders/${id}`;
   console.log(id);
 
   useEffect(() => {
@@ -117,15 +117,15 @@ const UpdateOrders = () => {
 
   const updateOrder = (e) => {
     fetch(url, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'content-type': 'application/json',
+        "content-type": "application/json",
       },
       body: JSON.stringify(order),
     })
       .then((res) => res.json())
       .then((data) => {
-        alert('Order has approved');
+        alert("Order has approved");
         e.target.reset();
       });
     e.preventDefault();
@@ -135,14 +135,14 @@ const UpdateOrders = () => {
     <>
       <div className="mx-auto w-100  booking">
         <h3 className="mt-5">Update Orders</h3>
-        <div className="update-form" style={{ textAlign: 'start' }}>
+        <div className="update-form" style={{ textAlign: "start" }}>
           <Form onSubmit={updateOrder}>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Name"
-                value={order.name || ''}
+                value={order.name || ""}
                 onChange={handleName}
               />
             </Form.Group>
@@ -151,7 +151,7 @@ const UpdateOrders = () => {
               <Form.Control
                 type="email"
                 placeholder="Email"
-                value={order.email || ''}
+                value={order.email || ""}
                 onChange={handleEmail}
               />
             </Form.Group>
@@ -161,7 +161,7 @@ const UpdateOrders = () => {
               <Form.Control
                 type="text"
                 placeholder="Destiantion"
-                value={order.destination || ''}
+                value={order.destination || ""}
                 onChange={handleDestination}
               />
             </Form.Group>
@@ -170,7 +170,7 @@ const UpdateOrders = () => {
               <Form.Control
                 type="text"
                 placeholder="Total Price"
-                value={order.price || ''}
+                value={order.price || ""}
                 onChange={handlePrice}
               />
             </Form.Group>
@@ -179,7 +179,7 @@ const UpdateOrders = () => {
               <Form.Control
                 type="text"
                 placeholder="Address"
-                value={order.address || ''}
+                value={order.address || ""}
                 onChange={handleAddress}
               />
             </Form.Group>
@@ -188,7 +188,7 @@ const UpdateOrders = () => {
               <Form.Control
                 type="text"
                 placeholder="Phone"
-                value={order.phone || ''}
+                value={order.phone || ""}
                 onChange={handlePhone}
               />
             </Form.Group>
@@ -197,7 +197,7 @@ const UpdateOrders = () => {
               <Form.Control
                 type="text"
                 placeholder="Status"
-                value={order.status || ''}
+                value={order.status || ""}
                 onChange={handleStatus}
               />
             </Form.Group>

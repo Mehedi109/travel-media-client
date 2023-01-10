@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
-import useAuth from '../../hooks/useAuth';
-import './MyOrders.css';
+import React, { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
+import useAuth from "../../hooks/useAuth";
+import "./MyOrders.css";
 
 const MyOrders = () => {
   const { user } = useAuth();
@@ -11,22 +11,22 @@ const MyOrders = () => {
   console.log(email);
 
   useEffect(() => {
-    fetch(`https://howling-zombie-15151.herokuapp.com/myOrders/${email}`)
+    fetch(`https://tourism-server.onrender.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
 
   const handleDelete = (id) => {
-    const url = `https://howling-zombie-15151.herokuapp.com/orders/${id}`;
-    const proceed = window.confirm('Are you sure, you want to delete');
+    const url = `https://tourism-server.onrender.com/orders/${id}`;
+    const proceed = window.confirm("Are you sure, you want to delete");
     if (proceed) {
       fetch(url, {
-        method: 'DELETE',
+        method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {
-            alert('data deleted successfully');
+            alert("data deleted successfully");
             const remainig = orders.filter((order) => order._id !== id);
             setOrders(remainig);
           }
@@ -36,7 +36,9 @@ const MyOrders = () => {
   return (
     <>
       <div>
-        <h2 className="mt-5 mb-5">My Orders : {orders.length}</h2>
+        <h2 className=" mb-5" style={{ marginTop: "120px" }}>
+          My Orders : {orders.length}
+        </h2>
         <Table striped bordered hover size="sm">
           <thead>
             <tr>
